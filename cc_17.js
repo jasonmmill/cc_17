@@ -14,6 +14,7 @@ class Customer {
     }
 }
 
+// Task 2 - Create a SalesRep Class
 class SalesRep {
     constructor(name) {
         this.name = name
@@ -28,6 +29,7 @@ class SalesRep {
     }
 }
 
+// Task 3 - Create a VIP Customer (extends Customer)
 class VIPCustomer extends Customer {
     constructor(name, email, vipLevel) {
         super(name, email)
@@ -37,5 +39,4 @@ class VIPCustomer extends Customer {
         totalSpend = this.purchaseHistory.reduce((total, amount) => total += amount, 0) * 1.1
 
     }
-
 }
