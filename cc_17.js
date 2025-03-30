@@ -13,3 +13,29 @@ class Customer {
         console.log(totalSpend)
     }
 }
+
+class SalesRep {
+    constructor(name) {
+        this.name = name
+        this.clients = []
+    }
+    addClient(customer) {
+        this.clients.push(customer)
+    }
+    getClientTotal(name) {
+        clientName = this.clients.find(name)
+        getTotalSpent(clientName)
+    }
+}
+
+class VIPCustomer extends Customer {
+    constructor(name, email, vipLevel) {
+        super(name, email)
+        this.vipLevel = vipLevel
+    }
+    getTotalSpent(){
+        totalSpend = this.purchaseHistory.reduce((total, amount) => total += amount, 0) * 1.1
+
+    }
+
+}
