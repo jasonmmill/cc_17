@@ -67,20 +67,20 @@ customer1.addPurchase(200)
 customer1.addPurchase(300)
 customer1.addPurchase(400)
 console.log(`Customer Name: ${customer1.name}`)
-console.log(`Total Spent: ${customer1.getTotalSpent()}`)
+console.log(`Total Spent: $${customer1.getTotalSpent()}`)
 
 // Task 2 Log
 const salesRep1 = new SalesReps("Gus Gomez")
 salesRep1.addClient(customer1)
 console.log(`Client(s) of ${salesRep1.name}: ${salesRep1.clients.map(client => client.name)}`)
-console.log(`Total sales for client: ${salesRep1.getClientTotal("Jason Miller")}`)
+console.log(`Total sales for client: $${salesRep1.getClientTotal("Jason Miller")}`)
 
 // Task 3 Log
 const vip1 = new VIPCustomers("Eric Torres", "etorres@g.com", "Gold")
 vip1.addPurchase(200)
 vip1.addPurchase(300)
 vip1.addPurchase(400)
-console.log(`Total Sales for client (w/bonus): ${vip1.getTotalSpent()}`)
+console.log(`Total Sales for client (w/bonus): $${vip1.getTotalSpent()}`)
 
 // Task 4 Prep
 const customer2 = new Customers("Galo Rebelo", "grebelo@g.com")
@@ -102,6 +102,6 @@ salesRep1.addClient(vip2)
 
 // Task 4 Log
 const allCustomers = [customer1, customer2, customer3, vip1, vip2]
-console.log(`Total revenue from all customers:`,reduceArr(allCustomers))
+console.log(`Total revenue from all customers: $${reduceArr(allCustomers)}`)
 console.log(`High spending customers:`,filterCustomers(allCustomers))
 console.log(`All customers:`,customerMap(allCustomers))
