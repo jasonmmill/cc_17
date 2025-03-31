@@ -82,6 +82,7 @@ vip1.addPurchase(300)
 vip1.addPurchase(400)
 console.log(`Total Sales for client (w/bonus): ${vip1.getTotalSpent()}`)
 
+// Task 4 Prep
 const customer2 = new Customers("Galo Rebelo", "grebelo@g.com")
 const customer3 = new Customers("Mohammed Al Zaben", "malzaben@g.com")
 const vip2 = new VIPCustomers("Bobby Newland", "bnewland@g.com", "Platinum")
@@ -99,6 +100,7 @@ salesRep1.addClient(customer3)
 salesRep1.addClient(vip1)
 salesRep1.addClient(vip2)
 
+// Task 4 Log
 const allCustomers = [customer1, customer2, customer3, vip1, vip2]
 console.log(`Total revenue from all customers:`,reduceArr(allCustomers))
 console.log(`High spending customers:`,filterCustomers(allCustomers))
